@@ -1,37 +1,52 @@
-.venv/
+# Python
 __pycache__/
-.pytest_cache/
 *.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
 .env
 .env.*
 !.env.example
-src/*.egg-info/
-build/
-dist/
-.coverage
-htmlcov/
-spark-warehouse/
-data/input/*
-data/raw/**
-data/bronze/**
-data/silver/**
-data/gold/**
-data/quarantine/**
-data/audit/**
-logs/**
-!data/input/.gitkeep
-!data/raw/.gitkeep
-!data/bronze/.gitkeep
-!data/silver/.gitkeep
-!data/gold/.gitkeep
-!data/quarantine/.gitkeep
-!data/audit/.gitkeep
-!logs/.gitkeep
-tmp/
-data/silver_incoming/
-data/silver_staging/
-data/_silver_incoming/
-data/_silver_staging/
 
-data/silver_batches/
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Generated data
+data/raw/
+data/bronze/
+data/silver/
+data/gold/
+data/quarantine/
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated benchmark data
 data/bench/
+
+# Generated pipeline outputs
+data/silver_batches/
+data/audit/
+data/input/
+tmp/
+
+# Spark generated files
+spark-warehouse/
+metastore_db/
