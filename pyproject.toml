@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retail-data-pipeline"
+version = "0.1.0"
+description = "Local PySpark ELT pipeline for UCI Online Retail"
+requires-python = ">=3.10"
+dependencies = ["pyspark>=3.5,<4", "openpyxl>=3.1", "psycopg2-binary>=2.9", "python-dotenv>=1.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
